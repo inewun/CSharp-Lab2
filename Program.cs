@@ -180,7 +180,7 @@ namespace Laboratory2
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("//Line length.");
             Console.ResetColor();
-            Console.WriteLine(line51.Length());
+            Console.WriteLine(line51.Length);
 
         }
     }
