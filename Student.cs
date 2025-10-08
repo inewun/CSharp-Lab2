@@ -13,7 +13,7 @@ namespace Laboratory2
     internal class Student
     {
         private string _name;
-        private List<int> _grades;
+        private int[] _grades;
 
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace Laboratory2
         /// <summary>
         /// Gets or sets the list of student's grades.
         /// </summary>
-        public List<int> Grades 
+        public int[] Grades 
         {
             get => _grades;
             set => _grades = value;
@@ -43,7 +43,7 @@ namespace Laboratory2
         public Student()
         {
             Name = "Ivan";
-            Grades = new List<int>(){5, 5, 5};
+            Grades = new int[] {5, 5, 5};
         }
 
 
@@ -55,7 +55,7 @@ namespace Laboratory2
         public Student(string name, params int[] grades)
         {
             Name = name;
-            Grades = new List<int>(grades);
+            Grades = grades;
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Laboratory2
         public Student(string name, Student other)
         {
             Name = name;
-            Grades = new List<int>(other.Grades);
+            Grades = (int[])other.Grades.Clone();
         }
 
 
