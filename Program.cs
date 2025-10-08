@@ -44,8 +44,8 @@ namespace Laboratory2
             line11.EndPoint = new Point(23, 8);
 
             Line line12 = new Line();
-            line11.StartPoint = new Point(5, 10);
-            line11.EndPoint = new Point(25, 10);
+            line12.StartPoint = new Point(5, 10);
+            line12.EndPoint = new Point(25, 10);
 
             Line line13 = new Line();
             line13.StartPoint = line11.StartPoint;
@@ -61,12 +61,12 @@ namespace Laboratory2
             
             line11.StartPoint.X = rnd.Next(-100, 101);
             line11.StartPoint.Y = rnd.Next(-100, 101);
-            line11.EndPoint.Y = rnd.Next(-100, 101);
+            line11.EndPoint.X = rnd.Next(-100, 101);
             line11.EndPoint.Y = rnd.Next(-100, 101);
 
             line12.StartPoint.X = rnd.Next(-100, 101);
             line12.StartPoint.Y = rnd.Next(-100, 101);
-            line12.EndPoint.Y = rnd.Next(-100, 101);
+            line12.EndPoint.X = rnd.Next(-100, 101);
             line12.EndPoint.Y = rnd.Next(-100, 101);
 
             Console.WriteLine();
@@ -101,42 +101,42 @@ namespace Laboratory2
             Console.WriteLine("3.1 Create students with names and an array of grades.");
             Console.ResetColor();
 
-            Student Vasya = new Student("Vasya", new[] { 2, 3, 5 });
-            Student Petya = new Student("Petya");
-            Petya.Grades = Vasya.Grades;
+            Student vasya = new Student("Vasya", new[] { 2, 3, 5 });
+            Student petya = new Student("Petya");
+            petya.Grades = vasya.Grades;
 
-            Console.WriteLine(Vasya.ToString());
+            Console.WriteLine(vasya.ToString());
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Petya copies Vasya's grades.");
             Console.ResetColor();
-            Console.WriteLine(Petya.ToString());
+            Console.WriteLine(petya.ToString());
 
-            Petya.Grades[0] = 5;
+            petya.Grades[0] = 5;
 
             Console.WriteLine();
-            Console.WriteLine(Vasya.ToString());
+            Console.WriteLine(vasya.ToString());
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Petya's grades have been changed. The first grade is 5");
             Console.ResetColor();
-            Console.WriteLine(Petya.ToString());
+            Console.WriteLine(petya.ToString());
 
-            Student Andrew = new Student("Andrew", Vasya);
+            Student andrew = new Student("Andrew", vasya);
 
             Console.WriteLine();
-            Console.WriteLine(Vasya.ToString());
+            Console.WriteLine(vasya.ToString());
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Andrew copies Vasya's grades.");
             Console.ResetColor();
-            Console.WriteLine(Andrew.ToString());
+            Console.WriteLine(andrew.ToString());
 
-            Andrew.Grades[0] = 4;
+            andrew.Grades[0] = 4;
 
             Console.WriteLine();
-            Console.WriteLine(Vasya.ToString());
+            Console.WriteLine(vasya.ToString());
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Andrew's grades have been changed. The first grade is 4");
             Console.ResetColor();
-            Console.WriteLine(Andrew.ToString());
+            Console.WriteLine(andrew.ToString());
 
 
             Console.WriteLine();
